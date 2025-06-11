@@ -21,47 +21,17 @@
         };
     };
 
-    macros {
-        sc_area: sc_area {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LGUI &kp LEFT_SHIFT &kp S>;
-            label = "SC_AREA";
-        };
-
-        win_left: win_left {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT_GUI &kp LEFT_ALT &kp LEFT>;
-            label = "WIN_LEFT";
-        };
-
-        win_right: win_right {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT_GUI &kp LEFT_ALT &kp RIGHT>;
-            label = "WIN_RIGHT";
-        };
-
-        win_2_3: win_2_3 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT_GUI &kp LEFT_ALT &kp E>;
-            label = "WIN_2_3";
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             display-name = "Base";
             bindings = <
-&kp DEL    &kp N1  &kp N2    &kp N3            &kp N4              &kp N5  &tog 4                                                                        &mo 3       &kp N6               &kp N7             &kp N8     &kp N9   &kp N0         &kp MINUS
-&kp TAB    &kp Q   &kp W     &kp F             &kp P               &kp B   &sc_area                                                                      &win_2_3    &kp J                &kp L              &kp U      &kp Y    &kp SEMICOLON  &kp BSLH
-&kp GRAVE  &kp A   &kp R     &hm LEFT_SHIFT S  &hm LEFT_CONTROL T  &kp G   &win_left  &kp END    &kp HOME              &kp PAGE_UP        &kp PAGE_DOWN  &win_right  &hm RIGHT_CONTROL M  &hm RIGHT_SHIFT N  &kp E      &kp I    &kp O          &kp SQT
-&kp LSHFT  &kp Z   &kp X     &kp C             &kp D               &kp V                         &kp LALT              &kp RIGHT_ALT                                 &kp K                &kp H              &kp COMMA  &kp DOT  &kp FSLH       &kp RSHFT
-&mo 2      &none   &kp CAPS  &kp LEFT          &kp RIGHT                   &kp BSPC   &lt 1 ESC  &kp LEFT_COMMAND      &kp RIGHT_COMMAND  &lt 1 ENTER    &kp SPACE                        &kp UP             &kp DOWN   &none    &none          &mo 2
+&kp DEL    &kp N1  &kp N2    &kp N3            &kp N4              &kp N5  &kp LG(LS(S))                                                                              &mo 3                    &kp N6               &kp N7             &kp N8     &kp N9   &kp N0         &kp MINUS
+&kp TAB    &kp Q   &kp W     &kp F             &kp P               &kp B   &kp LG(LS(V))                                                                              &kp RC(RA(E))            &kp J                &kp L              &kp U      &kp Y    &kp SEMICOLON  &kp BSLH
+&kp GRAVE  &kp A   &kp R     &hm LEFT_SHIFT S  &hm LEFT_CONTROL T  &kp G   &kp LA(LC(LEFT_ARROW))  &kp END    &kp HOME              &kp PAGE_UP        &kp PAGE_DOWN  &kp RA(RC(RIGHT_ARROW))  &hm RIGHT_CONTROL M  &hm RIGHT_SHIFT N  &kp E      &kp I    &kp O          &kp SQT
+&kp LSHFT  &kp Z   &kp X     &kp C             &kp D               &kp V                                      &kp LALT              &kp RIGHT_ALT                                              &kp K                &kp H              &kp COMMA  &kp DOT  &kp FSLH       &kp RSHFT
+&mo 2      &none   &kp CAPS  &kp LEFT          &kp RIGHT                   &kp BSPC                &lt 1 ESC  &kp LEFT_COMMAND      &kp RIGHT_COMMAND  &lt 1 ENTER    &kp SPACE                                     &kp UP             &kp DOWN   &none    &none          &mo 2
             >;
         };
 
