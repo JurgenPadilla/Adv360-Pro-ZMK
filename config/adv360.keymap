@@ -38,11 +38,11 @@
         layer_1 {
             display-name = "Base";
             bindings = <
-&none      &kp F1           &kp F2       &kp F3           &kp F4                             &kp F5             &kp F11                                                                                 &kp F12                &kp F6         &kp F7                         &kp F8           &kp F9           &kp F10          &none
-&kp TAB    &kp EXCLAMATION  &kp AT_SIGN  &kp POUND        &kp DOLLAR                         &kp PERCENT        &kp LC(KP_NUMBER_1)                                                                     &kp RC(KP_NUMBER_2)    &kp CARET      &kp KP_NUMBER_7                &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_EQUAL     &kp DELETE
-&kp TILDE  &kp AMPERSAND    &kp PLUS     &kp LEFT_BRACE   &hm LEFT_CONTROL LEFT_PARENTHESIS  &kp LEFT_BRACKET   &kp LC(KP_NUMBER_3)         &kp END     &kp HOME          &kp PAGE_UP    &kp PAGE_DOWN  &kp RC(KP_NUMBER_4)    &kp ASTERISK   &hm RIGHT_CONTROL KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_NUMBER_0  &kp DOUBLE_QUOTES
-&kp LSHFT  &kp PIPE         &kp MINUS    &kp RIGHT_BRACE  &kp RIGHT_PARENTHESIS              &kp RIGHT_BRACKET                                          &kp LEFT_ALT      &kp RIGHT_ALT                                        &kp BACKSLASH  &kp KP_NUMBER_1                &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp UNDERSCORE   &kp RSHFT
-&mo 2      &none            &kp CAPS     &kp LEFT         &kp RIGHT                                             &mt LEFT_CONTROL BACKSPACE  &kp ESCAPE  &kp LEFT_GUI      &kp RIGHT_GUI  &kp ENTER      &mt RIGHT_SHIFT SPACE                 &kp DOWN_ARROW                 &kp UP_ARROW     &kp LEFT_GUI     &kp RIGHT_ALT    &mo 2
+&none      &kp F1           &kp F2       &kp F3           &kp F4                 &kp F5             &kp F11                                                                                 &kp F12                &kp F6         &kp F7           &kp F8           &kp F9           &kp F10          &none
+&kp TAB    &kp EXCLAMATION  &kp AT_SIGN  &kp POUND        &kp DOLLAR             &kp PERCENT        &kp LC(KP_NUMBER_1)                                                                     &kp RC(KP_NUMBER_2)    &kp CARET      &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_EQUAL     &kp DELETE
+&kp TILDE  &kp AMPERSAND    &kp PLUS     &kp LEFT_BRACE   &kp LEFT_PARENTHESIS   &kp LEFT_BRACKET   &kp LC(KP_NUMBER_3)         &kp END     &kp HOME          &kp PAGE_UP    &kp PAGE_DOWN  &kp RC(KP_NUMBER_4)    &kp ASTERISK   &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_NUMBER_0  &kp DOUBLE_QUOTES
+&kp LSHFT  &kp PIPE         &kp MINUS    &kp RIGHT_BRACE  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET                                          &kp LEFT_ALT      &kp RIGHT_ALT                                        &kp BACKSLASH  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp UNDERSCORE   &kp RSHFT
+&mo 2      &none            &kp CAPS     &kp LEFT         &kp RIGHT                                 &mt LEFT_CONTROL BACKSPACE  &kp ESCAPE  &kp LEFT_GUI      &kp RIGHT_GUI  &kp ENTER      &mt RIGHT_SHIFT SPACE                 &kp DOWN_ARROW   &kp UP_ARROW     &kp LEFT_GUI     &kp RIGHT_ALT    &mo 2
             >;
         };
 
