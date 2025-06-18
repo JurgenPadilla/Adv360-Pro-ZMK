@@ -28,6 +28,13 @@
             bindings = <&kp RA(N) &kp N>;
             label = "ENHE";
         };
+
+        question: question {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RA(QUESTION)>;
+            label = "QUESTION";
+        };
     };
 
     keymap {
@@ -36,22 +43,22 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&none      &kp N1         &kp N2    &kp N3    &kp N4     &kp N5  &kp LC(LA(ENTER))                                                                              &mo 3                    &kp N6  &kp N7    &kp N8        &kp N9    &kp N0         &none
-&kp TAB    &kp Q          &kp W     &kp F     &kp P      &kp B   &kp LA(LC(G))                                                                                  &kp RC(RA(E))            &kp J   &kp L     &kp U         &kp Y     &kp SEMICOLON  &kp DEL
-&kp GRAVE  &kp A          &kp R     &kp S     &kp T      &kp G   &kp LA(LC(LEFT_ARROW))      &kp END    &kp HOME              &kp PAGE_UP        &kp PAGE_DOWN  &kp RA(RC(RIGHT_ARROW))  &kp M   &kp N     &kp E         &kp I     &kp O          &kp SQT
-&kp LSHFT  &kp Z          &kp X     &kp C     &kp D      &kp V                                          &kp LALT              &kp RIGHT_ALT                                              &kp K   &kp H     &kp COMMA     &kp DOT   &kp FSLH       &kp RSHFT
-&mo 2      &kp LS(LG(S))  &kp CAPS  &kp LEFT  &kp RIGHT          &mt LEFT_CONTROL BACKSPACE  &lt 1 ESC  &kp LEFT_COMMAND      &kp RIGHT_COMMAND  &lt 1 ENTER    &mt RIGHT_SHIFT SPACE            &kp DOWN  &kp UP_ARROW  &kp RGUI  &kp RIGHT_ALT  &mo 2
+&none          &kp N1         &kp N2    &kp N3    &kp N4     &kp N5  &kp LC(LA(ENTER))                                                                              &mo 3                    &kp N6  &kp N7    &kp N8        &kp N9    &kp N0         &none
+&kp TAB        &kp Q          &kp W     &kp F     &kp P      &kp B   &kp LA(LC(G))                                                                                  &kp RC(RA(E))            &kp J   &kp L     &kp U         &kp Y     &kp SEMICOLON  &kp DEL
+&kp GRAVE      &kp A          &kp R     &kp S     &kp T      &kp G   &kp LA(LC(LEFT_ARROW))      &kp END    &kp HOME              &kp PAGE_UP        &kp PAGE_DOWN  &kp RA(RC(RIGHT_ARROW))  &kp M   &kp N     &kp E         &kp I     &kp O          &kp SQT
+&kp LSHFT      &kp Z          &kp X     &kp C     &kp D      &kp V                                          &kp LALT              &kp RIGHT_ALT                                              &kp K   &kp H     &kp COMMA     &kp DOT   &kp FSLH       &kp RSHFT
+&kp LG(LS(S))  &kp LS(LG(V))  &kp CAPS  &kp LEFT  &kp RIGHT          &mt LEFT_CONTROL BACKSPACE  &lt 1 ESC  &kp LEFT_COMMAND      &kp RIGHT_COMMAND  &lt 1 ENTER    &mt RIGHT_SHIFT SPACE            &kp DOWN  &kp UP_ARROW  &kp RGUI  &kp RIGHT_ALT  &mo 2
             >;
         };
 
         layer_1 {
             display-name = "Base";
             bindings = <
-&none      &kp F1           &kp F2         &kp F3          &kp F4      &kp F5  &kp F11                                                                          &kp F12              &kp F6  &kp F7            &kp F8                &kp F9                 &kp F10            &none
-&kp TAB    &kp EXCLAMATION  &kp AT_SIGN    &kp POUND       &kp DOLLAR  &none   &kp LC(KP_NUMBER_1)                                                              &kp RC(KP_NUMBER_2)  &none   &kp PERCENT       &kp CARET             &enhe                  &kp COLON          &kp DELETE
-&kp TILDE  &kp ASTERISK     &kp AMPERSAND  &kp MINUS       &kp EQUAL   &none   &kp LC(KP_NUMBER_3)  &kp END     &kp HOME          &kp PAGE_UP    &kp PAGE_DOWN  &kp RC(KP_NUMBER_4)  &none   &kp LEFT_BRACE    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE    &kp DOUBLE_QUOTES
-&kp LSHFT  &kp BACKSLASH    &kp PIPE       &kp UNDERSCORE  &kp PLUS    &none                                    &kp LEFT_ALT      &kp RIGHT_ALT                                      &none   &kp LEFT_BRACKET  &kp LESS_THAN         &kp GREATER_THAN       &kp RIGHT_BRACKET  &kp RSHFT
-&mo 2      &none            &kp CAPS       &kp LEFT        &kp RIGHT           &kp BACKSPACE        &kp ESCAPE  &kp LEFT_GUI      &kp RIGHT_GUI  &kp RS(ENTER)  &kp SPACE                    &kp DOWN_ARROW    &kp UP_ARROW          &kp LEFT_GUI           &kp RIGHT_ALT      &mo 2
+&none          &kp F1           &kp F2         &kp F3     &kp F4      &kp F5            &none                                                                            &none                &kp F6             &kp F7          &kp F8                &kp F9                 &kp F10          &none
+&kp TAB        &kp EXCLAMATION  &kp AT_SIGN    &kp POUND  &kp DOLLAR  &kp F11           &kp LC(KP_NUMBER_1)                                                              &kp RC(KP_NUMBER_2)  &kp F12            &kp PERCENT     &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp COLON        &kp DELETE
+&kp TILDE      &kp LCTRL        &kp AMPERSAND  &kp EQUAL  &kp MINUS   &kp LA(LG(LEFT))  &kp LC(KP_NUMBER_3)  &kp END     &kp HOME          &kp PAGE_UP    &kp PAGE_DOWN  &kp RC(KP_NUMBER_4)  &kp RG(RA(RIGHT))  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp DOUBLE_QUOTES
+&kp LSHFT      &kp BACKSLASH    &kp PIPE       &kp PLUS   &kp UNDER   &question                                          &kp LEFT_ALT      &kp RIGHT_ALT                                      &enhe              &kp ASTERISK    &kp LESS_THAN         &kp GREATER_THAN       &kp QUESTION     &kp RSHFT
+&kp LG(LS(S))  &kp LG(LS(V))    &kp CAPS       &kp LEFT   &kp RIGHT                     &kp BACKSPACE        &kp ESCAPE  &kp LEFT_GUI      &kp RIGHT_GUI  &kp RS(ENTER)  &kp SPACE                               &kp DOWN_ARROW  &kp UP_ARROW          &kp LEFT_GUI           &kp RIGHT_ALT    &mo 2
             >;
         };
 
