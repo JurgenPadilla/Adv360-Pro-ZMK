@@ -19,6 +19,14 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
+
+        dtap_cv: dtap_cv {
+            compatible = "zmk,behavior-tap-dance";
+            label = "DTAP_CV";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp LG(C)>, <&kp LG(V)>;
+        };
     };
 
     macros {
@@ -54,11 +62,11 @@
         symbol {
             display-name = "Base";
             bindings = <
-&none          &kp F1           &kp F2         &kp F3     &kp F4      &kp F5            &kp C_BRIGHTNESS_DEC                                                              &kp C_BRIGHTNESS_INC  &kp F6             &kp F7          &kp F8                &kp F9                 &kp F10          &none
-&kp TAB        &kp EXCLAMATION  &kp AT_SIGN    &kp POUND  &kp DOLLAR  &kp F11           &kp C_VOLUME_DOWN                                                                 &kp C_VOLUME_UP       &kp F12            &kp PERCENT     &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp COLON        &kp DELETE
-&kp TILDE      &kp LCTRL        &kp AMPERSAND  &kp EQUAL  &kp MINUS   &kp LG(LC(LEFT))  &question             &kp END     &kp HOME          &kp PAGE_UP    &kp PAGE_DOWN  &enhe                 &kp RG(RC(RIGHT))  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp DOUBLE_QUOTES
-&kp LSHFT      &kp BACKSLASH    &kp PIPE       &kp PLUS   &kp UNDER   &kp LG(LA(LEFT))                                    &kp LEFT_ALT      &kp RIGHT_ALT                                       &kp RG(RA(RIGHT))  &kp ASTERISK    &kp LESS_THAN         &kp GREATER_THAN       &kp QUESTION     &kp RSHFT
-&kp LG(LS(S))  &kp LG(LS(V))    &kp CAPS       &kp LEFT   &kp RIGHT                     &kp LC(BACKSPACE)     &kp ESCAPE  &kp LEFT_GUI      &kp RIGHT_GUI  &kp RS(ENTER)  &kp SPACE                                &kp DOWN_ARROW  &kp UP_ARROW          &kp LEFT_GUI           &kp RIGHT_ALT    &mo 2
+&none          &kp F1           &kp F2         &kp F3     &kp F4      &kp F5            &kp C_BRIGHTNESS_DEC                                                            &kp C_BRIGHTNESS_INC  &kp F6             &kp F7          &kp F8                &kp F9                 &kp F10          &none
+&kp TAB        &kp EXCLAMATION  &kp AT_SIGN    &kp POUND  &kp DOLLAR  &kp F11           &kp C_VOLUME_DOWN                                                               &kp C_VOLUME_UP       &kp F12            &kp PERCENT     &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp COLON        &kp DELETE
+&kp TILDE      &kp LCTRL        &kp AMPERSAND  &kp EQUAL  &kp MINUS   &kp LG(LC(LEFT))  &question             &kp END   &kp HOME          &kp PAGE_UP    &kp PAGE_DOWN  &enhe                 &kp RG(RC(RIGHT))  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp DOUBLE_QUOTES
+&kp LSHFT      &kp BACKSLASH    &kp PIPE       &kp PLUS   &kp UNDER   &kp LG(LA(LEFT))                                  &kp LEFT_ALT      &kp RIGHT_ALT                                       &kp RG(RA(RIGHT))  &kp ASTERISK    &kp LESS_THAN         &kp GREATER_THAN       &kp QUESTION     &kp RSHFT
+&kp LG(LS(S))  &kp LG(LS(V))    &kp CAPS       &kp LEFT   &kp RIGHT                     &kp LA(BACKSPACE)     &dtap_cv  &kp LEFT_GUI      &kp RIGHT_GUI  &kp RS(ENTER)  &kp SPACE                                &kp DOWN_ARROW  &kp UP_ARROW          &kp LEFT_GUI           &kp RIGHT_ALT    &mo 2
             >;
         };
 
