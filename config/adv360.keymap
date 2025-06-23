@@ -151,9 +151,9 @@
             display-name = "Base";
             bindings = <
 &none      &kp F1          &kp F2        &kp F3        &kp F4        &kp F5      &kp C_BRIGHTNESS_DEC                                                                &kp C_BRIGHTNESS_INC  &kp F6       &kp F7          &kp F8                &kp F9                 &kp F10          &mo 3
-&kp TAB    &kp NUMBER_1    &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_0  &kp F11     &kp C_VOLUME_DOWN                                                                   &kp C_VOLUME_UP       &kp F12      &kp PERCENT     &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp COLON        &kp DELETE
-&kp TILDE  &kp NUMBER_4    &kp NUMBER_5  &kp NUMBER_6  &kp MINUS     &wspc_left  &question             &kp END       &kp HOME          &kp PAGE_UP    &kp PAGE_DOWN  &enhe                 &wspc_right  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp DOUBLE_QUOTES
-&kp LSHFT  &kp NUMBER_7    &kp NUMBER_8  &kp NUMBER_9  &kp UNDER     &term_left                                      &kp LEFT_ALT      &kp RIGHT_ALT                                       &term_right  &kp ASTERISK    &kp LESS_THAN         &kp GREATER_THAN       &kp QUESTION     &kp RSHFT
+&kp TAB    &kp NUMBER_1    &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp F11     &kp C_VOLUME_DOWN                                                                   &kp C_VOLUME_UP       &kp F12      &kp PERCENT     &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp COLON        &kp DELETE
+&kp TILDE  &kp NUMBER_5    &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &wspc_left  &question             &kp END       &kp HOME          &kp PAGE_UP    &kp PAGE_DOWN  &enhe                 &wspc_right  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp DOUBLE_QUOTES
+&kp LSHFT  &kp BACKSLASH   &kp PIPE      &kp NUMBER_9  &kp NUMBER_0  &term_left                                      &kp LEFT_ALT      &kp RIGHT_ALT                                       &term_right  &kp ASTERISK    &kp LESS_THAN         &kp GREATER_THAN       &kp QUESTION     &kp RSHFT
 &sc_area   &paste_history  &kp CAPS      &kp LEFT      &kp RIGHT                 &kp LA(BACKSPACE)     &lt 1 ESCAPE  &kp LEFT_GUI      &kp RIGHT_GUI  &kp RS(ENTER)  &kp SPACE                          &kp DOWN_ARROW  &kp UP_ARROW          &dtap_cv               &kp RIGHT_GUI    &kp RIGHT_ALT
             >;
         };
