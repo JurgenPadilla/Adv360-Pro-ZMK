@@ -27,6 +27,17 @@
             tapping-term-ms = <200>;
             bindings = <&kp LG(C)>, <&kp LG(V)>;
         };
+
+        auto_shift: auto_shift {
+            compatible = "zmk,behavior-hold-tap";
+            label = "AUTO_SHIFT";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <135>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+        };
     };
 
     macros {
@@ -82,7 +93,7 @@
         tile_2_3: tile_2_3 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LA(LC(G))>;
+            bindings = <&kp LA(LC(E))>;
             label = "TILE_2_3";
         };
 
@@ -128,11 +139,11 @@
         base {
             display-name = "Base";
             bindings = <
-&none      &kp N1          &kp N2    &kp N3    &kp N4     &kp N5  &tile_fs                                                                                       &kp C_PLAY_PAUSE       &kp N6  &kp N7    &kp N8        &kp N9    &kp N0         &mo 3
-&kp TAB    &kp Q           &kp W     &kp F     &kp P      &kp B   &tile_1_3                                                                                      &tile_2_3              &kp J   &kp L     &kp U         &kp Y     &kp SEMICOLON  &kp DEL
-&kp GRAVE  &kp A           &kp R     &kp S     &kp T      &kp G   &tile_left                  &kp END    &kp HOME              &kp PAGE_UP        &kp PAGE_DOWN  &tile_right            &kp M   &kp N     &kp E         &kp I     &kp O          &kp SQT
-&kp LSHFT  &kp Z           &kp X     &kp C     &kp D      &kp V                                          &kp LALT              &kp RIGHT_ALT                                            &kp K   &kp H     &kp COMMA     &kp DOT   &kp FSLH       &kp RSHFT
-&sc_area   &paste_history  &kp CAPS  &kp LEFT  &kp RIGHT          &mt LEFT_CONTROL BACKSPACE  &lt 2 ESC  &kp LEFT_COMMAND      &kp RIGHT_COMMAND  &lt 1 ENTER    &mt RIGHT_SHIFT SPACE          &kp DOWN  &kp UP_ARROW  &dtap_cv  &kp RIGHT_GUI  &kp RIGHT_ALT
+&none      &kp N1                  &kp N2                  &kp N3                  &kp N4                  &kp N5  &tile_fs                                                                                       &kp C_PLAY_PAUSE       &kp N6  &kp N7    &kp N8        &kp N9    &kp N0         &mo 3
+&kp TAB    &auto_shift Q NUMBER_1  &auto_shift W NUMBER_2  &auto_shift F NUMBER_3  &auto_shift P NUMBER_4  &kp B   &tile_1_3                                                                                      &tile_2_3              &kp J   &kp L     &kp U         &kp Y     &kp SEMICOLON  &kp DEL
+&kp GRAVE  &auto_shift A NUMBER_5  &auto_shift R NUMBER_6  &auto_shift S NUMBER_7  &auto_shift T NUMBER_8  &kp G   &tile_left                  &kp END    &kp HOME              &kp PAGE_UP        &kp PAGE_DOWN  &tile_right            &kp M   &kp N     &kp E         &kp I     &kp O          &kp SQT
+&kp LSHFT  &kp Z                   &kp X                   &auto_shift C NUMBER_9  &auto_shift D NUMBER_0  &kp V                                          &kp LALT              &kp RIGHT_ALT                                            &kp K   &kp H     &kp COMMA     &kp DOT   &kp FSLH       &kp RSHFT
+&sc_area   &paste_history          &kp CAPS                &kp LEFT                &kp RIGHT                       &mt LEFT_CONTROL BACKSPACE  &lt 1 ESC  &kp LEFT_COMMAND      &kp RIGHT_COMMAND  &lt 2 ENTER    &mt RIGHT_SHIFT SPACE          &kp DOWN  &kp UP_ARROW  &dtap_cv  &kp RIGHT_GUI  &kp RIGHT_ALT
             >;
         };
 
@@ -153,7 +164,7 @@
 &none      &kp F1          &kp F2        &kp F3        &kp F4        &kp F5      &kp C_BRIGHTNESS_DEC                                                              &kp C_BRIGHTNESS_INC  &kp F6       &kp F7          &kp F8                &kp F9                 &kp F10          &mo 3
 &kp TAB    &kp NUMBER_1    &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp F11     &kp C_VOLUME_DOWN                                                                 &kp C_VOLUME_UP       &kp F12      &kp PERCENT     &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp COLON        &kp DELETE
 &kp TILDE  &kp NUMBER_5    &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &wspc_left  &question             &kp END     &kp HOME          &kp PAGE_UP    &kp PAGE_DOWN  &enhe                 &wspc_right  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp DOUBLE_QUOTES
-&kp LSHFT  &kp NUMBER_9    &kp NUMBER_0  &kp PLUS      &kp MINUS     &term_left                                    &kp LEFT_ALT      &kp RIGHT_ALT                                       &term_right  &kp ASTERISK    &kp LESS_THAN         &kp GREATER_THAN       &kp QUESTION     &kp RSHFT
+&kp LSHFT  &kp BACKSLASH   &kp PIPE      &kp NUMBER_9  &kp NUMBER_0  &term_left                                    &kp LEFT_ALT      &kp RIGHT_ALT                                       &term_right  &kp ASTERISK    &kp LESS_THAN         &kp GREATER_THAN       &kp QUESTION     &kp RSHFT
 &sc_area   &paste_history  &kp CAPS      &kp LEFT      &kp RIGHT                 &kp LA(BACKSPACE)     &kp ESCAPE  &kp LEFT_GUI      &kp RIGHT_GUI  &kp RS(ENTER)  &kp SPACE                          &kp DOWN_ARROW  &kp UP_ARROW          &dtap_cv               &kp RIGHT_GUI    &kp RIGHT_ALT
             >;
         };
