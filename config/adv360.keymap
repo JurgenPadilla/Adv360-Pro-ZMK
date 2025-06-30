@@ -131,6 +131,13 @@
             bindings = <&kp LG(LA(RIGHT_ARROW))>;
             label = "TERM_RIGHT";
         };
+
+        mission_ctrl: mission_ctrl {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RG(RC(UP_ARROW))>;
+            label = "MISSION_CTRL";
+        };
     };
 
     keymap {
@@ -139,44 +146,33 @@
         base {
             display-name = "Base";
             bindings = <
-&none      &kp N1               &kp N2               &kp N3               &kp N4               &kp N5               &tile_fs                                                                                  &kp C_PLAY_PAUSE  &kp N6               &kp N7               &kp N8               &kp N9               &kp N0               &mo 4
-&kp TAB    &auto_shift LS(Q) Q  &auto_shift LS(W) W  &auto_shift LS(F) F  &auto_shift LS(P) P  &auto_shift LS(B) B  &tile_1_3                                                                                 &tile_2_3         &auto_shift RS(J) J  &auto_shift RS(L) L  &auto_shift RS(U) U  &auto_shift RS(Y) Y  &kp SEMICOLON        &kp DEL
-&kp GRAVE  &auto_shift LS(A) A  &auto_shift LS(R) R  &auto_shift LS(S) S  &auto_shift LS(T) T  &auto_shift LS(G) G  &tile_left       &kp END        &kp HOME              &kp PAGE_UP        &kp PAGE_DOWN    &tile_right       &auto_shift RS(M) M  &auto_shift RS(N) N  &auto_shift RS(E) E  &auto_shift RS(I) I  &auto_shift RS(O) O  &kp SQT
-&kp LSHFT  &auto_shift LS(Z) Z  &auto_shift LS(X) X  &auto_shift LS(C) C  &auto_shift LS(D) D  &auto_shift LS(V) V                                  &kp LALT              &kp RIGHT_ALT                                         &auto_shift RS(K) K  &auto_shift RS(H) H  &kp COMMA            &kp DOT              &kp FSLH             &kp RSHFT
-&sc_area   &paste_history       &kp CAPS             &kp LEFT             &kp RIGHT                                 &lt 1 BACKSPACE  &mt LCTRL ESC  &kp LEFT_COMMAND      &kp RIGHT_COMMAND  &mt RSHFT ENTER  &lt 2 SPACE                            &kp DOWN             &kp UP_ARROW         &dtap_cv             &kp RIGHT_GUI        &kp RIGHT_ALT
+&none       &kp N1               &kp N2               &kp N3               &kp N4               &kp N5               &tile_fs                                                                                  &kp C_PLAY_PAUSE  &kp N6               &kp N7               &kp N8               &kp N9               &kp N0               &mo 3
+&kp DELETE  &auto_shift LS(Q) Q  &auto_shift LS(W) W  &auto_shift LS(F) F  &auto_shift LS(P) P  &auto_shift LS(B) B  &tile_1_3                                                                                 &tile_2_3         &auto_shift RS(J) J  &auto_shift RS(L) L  &auto_shift RS(U) U  &auto_shift RS(Y) Y  &kp SEMICOLON        &kp DEL
+&kp GRAVE   &auto_shift LS(A) A  &auto_shift LS(R) R  &auto_shift LS(S) S  &auto_shift LS(T) T  &auto_shift LS(G) G  &tile_left       &kp END        &kp HOME              &kp PAGE_UP        &kp PAGE_DOWN    &tile_right       &auto_shift RS(M) M  &auto_shift RS(N) N  &auto_shift RS(E) E  &auto_shift RS(I) I  &auto_shift RS(O) O  &kp SQT
+&kp LSHFT   &auto_shift LS(Z) Z  &auto_shift LS(X) X  &auto_shift LS(C) C  &auto_shift LS(D) D  &auto_shift LS(V) V                                  &kp LALT              &kp RIGHT_ALT                                         &auto_shift RS(K) K  &auto_shift RS(H) H  &kp COMMA            &kp DOT              &kp FSLH             &kp RSHFT
+&none       &sc_area             &paste_history       &kp LEFT_ALT         &kp LEFT_COMMAND                          &lt 1 BACKSPACE  &mt LCTRL ESC  &kp LEFT_COMMAND      &kp RIGHT_COMMAND  &mt RSHFT ENTER  &lt 2 SPACE                            &kp TAB              &kp CAPS             &dtap_cv             &mission_ctrl        &none
             >;
         };
 
         symbol {
             display-name = "Base";
             bindings = <
-&none      &kp F1           &kp F2         &kp F3     &kp F4          &kp F5      &kp C_BRIGHTNESS_DEC                                                                    &kp C_BRIGHTNESS_INC  &kp F6       &kp F7          &kp F8                &kp F9                 &kp F10          &mo 4
-&kp TAB    &kp EXCLAMATION  &kp AT_SIGN    &kp POUND  &kp DOLLAR      &kp F11     &kp C_VOLUME_DOWN                                                                       &kp C_VOLUME_UP       &kp F12      &kp PERCENT     &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp COLON        &kp DELETE
-&kp TILDE  &kp CARET        &kp AMPERSAND  &kp EQUAL  &kp UNDERSCORE  &wspc_left  &question             &kp END           &kp HOME          &kp PAGE_UP    &kp PAGE_DOWN  &enhe                 &wspc_right  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp DOUBLE_QUOTES
-&kp LSHFT  &kp BACKSLASH    &kp PIPE       &kp PLUS   &kp MINUS       &term_left                                          &kp LEFT_ALT      &kp RIGHT_ALT                                       &term_right  &kp ASTERISK    &kp LESS_THAN         &kp GREATER_THAN       &kp QUESTION     &kp RSHFT
-&sc_area   &paste_history   &kp CAPS       &kp LEFT   &kp RIGHT                   &kp LA(BACKSPACE)     &mt LCTRL ESCAPE  &kp LEFT_GUI      &kp RIGHT_GUI  &kp RS(ENTER)  &kp SPACE                          &kp DOWN_ARROW  &kp UP_ARROW          &dtap_cv               &kp RIGHT_GUI    &kp RIGHT_ALT
+&none       &kp F1           &kp F2          &kp F3        &kp F4          &kp F5      &kp C_BRIGHTNESS_DEC                                                                    &kp C_BRIGHTNESS_INC  &kp F6       &kp F7          &kp F8                &kp F9                 &kp F10          &mo 3
+&kp DELETE  &kp EXCLAMATION  &kp AT_SIGN     &kp POUND     &kp DOLLAR      &kp F11     &kp C_VOLUME_DOWN                                                                       &kp C_VOLUME_UP       &kp F12      &kp PERCENT     &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp COLON        &kp DELETE
+&kp TILDE   &kp CARET        &kp AMPERSAND   &kp EQUAL     &kp UNDERSCORE  &wspc_left  &question             &kp END           &kp HOME          &kp PAGE_UP    &kp PAGE_DOWN  &enhe                 &wspc_right  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp DOUBLE_QUOTES
+&kp LSHFT   &kp BACKSLASH    &kp PIPE        &kp PLUS      &kp MINUS       &term_left                                          &kp LEFT_ALT      &kp RIGHT_ALT                                       &term_right  &kp ASTERISK    &kp LESS_THAN         &kp GREATER_THAN       &kp QUESTION     &kp RSHFT
+&none       &sc_area         &paste_history  &kp LEFT_ALT  &kp LEFT_GUI                &kp LA(BACKSPACE)     &mt LCTRL ESCAPE  &kp LEFT_GUI      &kp RIGHT_GUI  &kp RS(ENTER)  &kp SPACE                          &kp TAB         &kp CAPS              &dtap_cv               &mission_ctrl    &none
             >;
         };
 
         nav {
             display-name = "Base";
             bindings = <
-&none      &kp F1          &kp F2          &kp F3          &kp F4           &kp F5      &kp C_BRIGHTNESS_DEC                                                                    &kp C_BRIGHTNESS_INC  &kp F6       &kp F7          &kp F8        &kp F9        &kp F10            &mo 4
-&kp TAB    &kp EQUAL       &kp PAGE_UP     &kp UP_ARROW    &kp PAGE_DOWN    &kp F11     &kp C_VOLUME_DOWN                                                                       &kp C_VOLUME_UP       &kp F12      &kp NUMBER_7    &kp NUMBER_8  &kp NUMBER_9  &kp RIGHT_COMMAND  &kp DELETE
-&kp TILDE  &kp LEFT_SHIFT  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &wspc_left  &question             &kp END           &kp HOME          &kp PAGE_UP    &kp PAGE_DOWN  &enhe                 &wspc_right  &kp NUMBER_4    &kp NUMBER_5  &kp NUMBER_6  &kp NUMBER_0       &kp DOUBLE_QUOTES
-&kp LSHFT  &kp SLASH       &kp ASTERISK    &kp PLUS        &kp MINUS        &term_left                                          &kp LEFT_ALT      &kp RIGHT_ALT                                       &term_right  &kp NUMBER_1    &kp NUMBER_2  &kp NUMBER_3  &kp RIGHT_ALT      &kp RSHFT
-&sc_area   &paste_history  &kp CAPS        &kp LEFT        &kp RIGHT                    &kp LA(BACKSPACE)     &mt RCTRL ESCAPE  &kp LEFT_GUI      &kp RIGHT_GUI  &kp RS(ENTER)  &kp SPACE                          &kp DOWN_ARROW  &kp UP_ARROW  &dtap_cv      &kp RIGHT_GUI      &kp RIGHT_ALT
-            >;
-        };
-
-        numpad {
-            display-name = "Base";
-            bindings = <
-&none      &kp F1          &kp F2        &kp F3        &kp F4        &kp F5      &kp C_BRIGHTNESS_DEC                                                              &kp C_BRIGHTNESS_INC  &kp F6       &kp F7          &kp F8                &kp F9                 &kp F10          &mo 4
-&kp TAB    &kp NUMBER_1    &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp F11     &kp C_VOLUME_DOWN                                                                 &kp C_VOLUME_UP       &kp F12      &kp PERCENT     &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp COLON        &kp DELETE
-&kp TILDE  &kp NUMBER_5    &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &wspc_left  &question             &kp END     &kp HOME          &kp PAGE_UP    &kp PAGE_DOWN  &enhe                 &wspc_right  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp DOUBLE_QUOTES
-&kp LSHFT  &kp BACKSLASH   &kp PIPE      &kp NUMBER_9  &kp NUMBER_0  &term_left                                    &kp LEFT_ALT      &kp RIGHT_ALT                                       &term_right  &kp ASTERISK    &kp LESS_THAN         &kp GREATER_THAN       &kp QUESTION     &kp RSHFT
-&sc_area   &paste_history  &kp CAPS      &kp LEFT      &kp RIGHT                 &kp LA(BACKSPACE)     &kp ESCAPE  &kp LEFT_GUI      &kp RIGHT_GUI  &kp RS(ENTER)  &kp SPACE                          &kp DOWN_ARROW  &kp UP_ARROW          &dtap_cv               &kp RIGHT_GUI    &kp RIGHT_ALT
+&none      &kp F1     &kp F2          &kp F3          &kp F4            &kp F5      &kp C_BRIGHTNESS_DEC                                                                    &kp C_BRIGHTNESS_INC  &kp F6       &kp F7        &kp F8        &kp F9        &kp F10            &mo 3
+&kp DEL    &kp DOT    &kp PAGE_UP     &kp UP_ARROW    &kp PAGE_DOWN     &kp F11     &kp C_VOLUME_DOWN                                                                       &kp C_VOLUME_UP       &kp F12      &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp RIGHT_COMMAND  &kp DELETE
+&kp TILDE  &kp EQUAL  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW   &wspc_left  &question             &kp END           &kp HOME          &kp PAGE_UP    &kp PAGE_DOWN  &enhe                 &wspc_right  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp NUMBER_0       &kp DOUBLE_QUOTES
+&kp LSHFT  &kp SLASH  &kp ASTERISK    &kp PLUS        &kp MINUS         &term_left                                          &kp LEFT_ALT      &kp RIGHT_ALT                                       &term_right  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp RIGHT_ALT      &kp RSHFT
+&none      &sc_area   &paste_history  &kp LEFT_ALT    &kp LEFT_COMMAND              &kp LA(BACKSPACE)     &mt RCTRL ESCAPE  &kp LEFT_GUI      &kp RIGHT_GUI  &kp RS(ENTER)  &kp SPACE                          &kp TAB       &kp CAPS      &dtap_cv      &mission_ctrl      &none
             >;
         };
 
@@ -191,10 +187,21 @@
             >;
         };
 
+        numpad {
+            display-name = "Base";
+            bindings = <
+&none      &kp F1          &kp F2        &kp F3        &kp F4        &kp F5      &kp C_BRIGHTNESS_DEC                                                              &kp C_BRIGHTNESS_INC  &kp F6       &kp F7          &kp F8                &kp F9                 &kp F10          &mo 3
+&kp TAB    &kp NUMBER_1    &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp F11     &kp C_VOLUME_DOWN                                                                 &kp C_VOLUME_UP       &kp F12      &kp PERCENT     &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp COLON        &kp DELETE
+&kp TILDE  &kp NUMBER_5    &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &wspc_left  &question             &kp END     &kp HOME          &kp PAGE_UP    &kp PAGE_DOWN  &enhe                 &wspc_right  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp DOUBLE_QUOTES
+&kp LSHFT  &kp BACKSLASH   &kp PIPE      &kp NUMBER_9  &kp NUMBER_0  &term_left                                    &kp LEFT_ALT      &kp RIGHT_ALT                                       &term_right  &kp ASTERISK    &kp LESS_THAN         &kp GREATER_THAN       &kp QUESTION     &kp RSHFT
+&sc_area   &paste_history  &kp CAPS      &kp LEFT      &kp RIGHT                 &kp LA(BACKSPACE)     &kp ESCAPE  &kp LEFT_GUI      &kp RIGHT_GUI  &kp RS(ENTER)  &kp SPACE                          &kp DOWN_ARROW  &kp UP_ARROW          &dtap_cv               &kp RIGHT_GUI    &kp RIGHT_ALT
+            >;
+        };
+
         keypad {
             display-name = "Kp";
             bindings = <
-&kp EQUAL  &kp N1          &kp N2          &kp N3          &kp N4           &kp N5  &trans                                                                    &mo 4      &kp N6         &kp KP_NUM  &kp KP_EQUAL  &kp KP_DIVIDE  &kp KP_MULTIPLY  &kp MINUS
+&kp EQUAL  &kp N1          &kp N2          &kp N3          &kp N4           &kp N5  &trans                                                                    &mo 3      &kp N6         &kp KP_NUM  &kp KP_EQUAL  &kp KP_DIVIDE  &kp KP_MULTIPLY  &kp MINUS
 &kp TAB    &kp Q           &kp PAGE_UP     &kp UP_ARROW    &kp PAGE_DOWN    &kp T   &none                                                                     &none      &kp RIGHT_GUI  &kp KP_N7   &kp KP_N8     &kp KP_N9      &kp KP_PLUS      &kp BSLH
 &kp ESC    &kp LEFT_SHIFT  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp G   &none     &none       &none                 &none              &none      &none      &kp DOT        &kp KP_N4   &kp KP_N5     &kp KP_N6      &kp KP_NUMBER_0  &kp SQT
 &kp LSHFT  &kp Z           &kp HOME        &kp C           &kp END          &kp B                         &kp LEFT_ALT          &kp RIGHT_ALT                            &kp RIGHT_ALT  &kp KP_N1   &kp KP_N2     &kp KP_N3      &kp KP_MINUS     &kp RSHFT
