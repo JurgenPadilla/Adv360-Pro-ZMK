@@ -154,6 +154,15 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        shortcat {
+            bindings = <&kp RG(RS(SPACE))>;
+            key-positions = <65 70>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
