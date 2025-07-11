@@ -14,7 +14,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <250>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
@@ -158,6 +158,13 @@
             bindings = <&kp RG(RS(J))>;
             label = "SCROLL_SHORTCUT";
         };
+
+        double_esc: double_esc {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp ESCAPE &kp ESCAPE>;
+            label = "DOUBLE_ESC";
+        };
     };
 
     combos { compatible = "zmk,combos"; };
@@ -168,33 +175,33 @@
         base {
             display-name = "Base";
             bindings = <
-&none       &kp N1    &kp N2          &kp N3            &kp N4   &kp N5  &tile_fs                                                                                        &kp C_PLAY_PAUSE  &kp N6  &kp N7         &kp N8         &kp N9    &kp N0         &mo 3
-&kp DELETE  &kp Q     &kp W           &kp F             &kp P    &kp B   &tile_1_3                                                                                       &tile_2_3         &kp J   &kp L          &kp U          &kp Y     &kp SEMI       &kp DEL
-&kp GRAVE   &kp A     &kp R           &hm LEFT_SHIFT S  &kp T    &kp G   &tile_1_4        &wspc_left     &tile_left        &tile_right  &wspc_right                      &tile_3_4         &kp M   &kp N          &hm RSHIFT E   &kp I     &kp O          &kp SQT
-&kp LSHFT   &kp Z     &kp X           &kp C             &kp D    &kp V                                   &kp LEFT_ALT      &caps_word                                                      &kp K   &kp H          &kp COMMA      &kp DOT   &kp FSLH       &kp RSHFT
-&none       &sc_area  &paste_history  &caps_word        &kp TAB          &lt 1 BACKSPACE  &mt LCTRL ESC  &kp LEFT_GUI      &kp TAB      &auto_shift RG(RS(SPACE)) ENTER  &lt 2 SPACE               &kp RIGHT_ALT  &kp RIGHT_GUI  &dtap_cv  &mission_ctrl  &none
+&none       &kp N1           &kp N2                   &kp N3          &kp N4              &kp N5  &tile_fs                                                                                              &kp C_PLAY_PAUSE  &kp N6  &kp N7               &kp N8           &kp N9               &kp N0                     &mo 3
+&kp DELETE  &kp Q            &kp W                    &kp F           &kp P               &kp B   &tile_1_3                                                                                             &tile_2_3         &kp J   &kp L                &kp U            &kp Y                &kp SEMI                   &kp BACKSPACE
+&kp GRAVE   &kp A            &hm LG(LC(LS(SPACE))) R  &hm LEFT_ALT S  &hm LEFT_COMMAND T  &kp G   &tile_1_4        &wspc_left             &tile_left        &tile_right  &wspc_right                    &tile_3_4         &kp M   &hm RIGHT_COMMAND N  &hm RIGHT_ALT E  &hm RG(RS(SPACE)) I  &kp O                      &kp SQT
+&kp TAB     &hm LG(LS(S)) Z  &hm LG(LS(V)) X          &kp C           &kp D               &kp V                                           &kp LEFT_ALT      &caps_word                                                    &kp K   &kp H                &kp COMMA        &kp DOT              &hm RG(RC(UP_ARROW)) FSLH  &caps_word
+&none       &none            &none                    &none           &none                       &lt 1 BACKSPACE  &auto_shift LCTRL ESC  &kp LEFT_GUI      &kp TAB      &auto_shift RIGHT_SHIFT ENTER  &lt 2 SPACE               &none                &none            &none                &none                      &none
             >;
         };
 
         symbol {
             display-name = "Base";
             bindings = <
-&none       &kp F1           &kp F2          &kp F3      &kp F4          &kp F5      &kp C_BRIGHTNESS_DEC                                                                  &kp C_BRIGHTNESS_INC  &kp F6       &kp F7          &kp F8                &kp F9                 &kp F10          &mo 3
-&kp DELETE  &kp EXCLAMATION  &kp AT_SIGN     &kp POUND   &kp DOLLAR      &kp F11     &kp C_VOLUME_DOWN                                                                     &kp C_VOLUME_UP       &kp F12      &kp PERCENT     &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp COLON        &kp DELETE
-&kp TILDE   &kp CARET        &kp AMPERSAND   &kp EQUAL   &kp UNDERSCORE  &question   &kp C_PREVIOUS        &wspc_left        &tile_left        &tile_right  &wspc_right    &kp C_NEXT            &enhe        &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp DOUBLE_QUOTES
-&kp LSHFT   &kp BACKSLASH    &kp PIPE        &kp PLUS    &kp MINUS       &term_left                                          &kp LEFT_ALT      &caps_word                                        &term_right  &kp ASTERISK    &kp LESS_THAN         &kp GREATER_THAN       &kp QUESTION     &kp RSHFT
-&none       &sc_area         &paste_history  &caps_word  &kp TAB                     &kp LA(BACKSPACE)     &mt LCTRL ESCAPE  &kp LEFT_GUI      &kp TAB      &kp RS(ENTER)  &kp SPACE                          &kp RIGHT_ALT   &kp RIGHT_GUI         &dtap_cv               &mission_ctrl    &none
+&none       &kp F1           &kp F2         &kp F3     &kp F4          &kp F5      &kp C_BRIGHTNESS_DEC                                                             &kp C_BRIGHTNESS_INC  &kp F6       &kp F7          &kp F8                &kp F9                 &kp F10          &mo 3
+&kp DELETE  &kp EXCLAMATION  &kp AT_SIGN    &kp POUND  &kp DOLLAR      &kp F11     &kp C_VOLUME_DOWN                                                                &kp C_VOLUME_UP       &kp F12      &kp PERCENT     &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp COLON        &kp BACKSPACE
+&kp TILDE   &kp CARET        &kp AMPERSAND  &kp EQUAL  &kp UNDERSCORE  &question   &kp C_PREVIOUS        &wspc_left   &tile_left        &tile_right  &wspc_right    &kp C_NEXT            &enhe        &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp DOUBLE_QUOTES
+&kp TAB     &kp BACKSLASH    &kp PIPE       &kp PLUS   &kp MINUS       &term_left                                     &kp LEFT_ALT      &caps_word                                        &term_right  &kp ASTERISK    &kp LESS_THAN         &kp GREATER_THAN       &kp QUESTION     &kp RSHFT
+&none       &none            &none          &none      &none                       &kp LA(BACKSPACE)     &double_esc  &kp LEFT_GUI      &kp TAB      &kp RS(ENTER)  &kp SPACE                          &none           &none                 &none                  &none            &none
             >;
         };
 
         nav {
             display-name = "Base";
             bindings = <
-&none      &kp F1     &kp F2          &kp F3          &kp F4           &kp F5      &kp C_BRIGHTNESS_DEC                                                                      &kp C_BRIGHTNESS_INC  &kp F6       &kp F7         &kp F8         &kp F9        &kp F10        &mo 3
-&kp DEL    &kp HOME   &kp PAGE_UP     &kp UP_ARROW    &kp PAGE_DOWN    &kp F11     &kp C_VOLUME_DOWN                                                                         &kp C_VOLUME_UP       &kp F12      &kp NUMBER_7   &kp NUMBER_8   &kp NUMBER_9  &kp STAR       &kp DELETE
-&kp TILDE  &kp EQUAL  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &question   &kp C_PREVIOUS        &wspc_left        &tile_left            &tile_right  &wspc_right    &kp C_NEXT            &enhe        &kp NUMBER_4   &kp NUMBER_5   &kp NUMBER_6  &kp NUMBER_0   &kp DOUBLE_QUOTES
-&kp LSHFT  &kp END    &kp DOT         &kp PLUS        &kp MINUS        &term_left                                          &kp LEFT_ALT          &caps_word                                        &term_right  &kp NUMBER_1   &kp NUMBER_2   &kp NUMBER_3  &kp BACKSLASH  &kp RSHFT
-&none      &sc_area   &paste_history  &caps_word      &kp TAB                      &kp LA(BACKSPACE)     &mt RCTRL ESCAPE  &kp LEFT_COMMAND      &kp TAB      &kp RS(ENTER)  &kp SPACE                          &kp RIGHT_ALT  &kp RIGHT_GUI  &dtap_cv      &mission_ctrl  &none
+&none      &kp F1     &kp F2          &kp F3          &kp F4           &kp F5      &kp C_BRIGHTNESS_DEC                                                                 &kp C_BRIGHTNESS_INC  &kp F6       &kp F7                      &kp F8                  &kp F9        &kp F10        &mo 3
+&kp DEL    &kp HOME   &kp PAGE_UP     &kp UP_ARROW    &kp PAGE_DOWN    &kp F11     &kp C_VOLUME_DOWN                                                                    &kp C_VOLUME_UP       &kp F12      &kp NUMBER_7                &kp NUMBER_8            &kp NUMBER_9  &kp STAR       &kp DELETE
+&kp TILDE  &kp EQUAL  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &question   &kp C_PREVIOUS        &wspc_left   &tile_left            &tile_right  &wspc_right    &kp C_NEXT            &enhe        &hm RIGHT_COMMAND NUMBER_4  &hm RIGHT_ALT NUMBER_5  &kp NUMBER_6  &kp NUMBER_0   &kp DOUBLE_QUOTES
+&kp LSHFT  &kp END    &kp DOT         &kp PLUS        &kp MINUS        &term_left                                     &kp LEFT_ALT          &caps_word                                        &term_right  &kp NUMBER_1                &kp NUMBER_2            &kp NUMBER_3  &kp BACKSLASH  &kp RSHFT
+&none      &sc_area   &paste_history  &caps_word      &kp TAB                      &kp LA(BACKSPACE)     &double_esc  &kp LEFT_COMMAND      &kp TAB      &kp RS(ENTER)  &kp SPACE                          &kp RIGHT_ALT               &kp RIGHT_GUI           &dtap_cv      &mission_ctrl  &none
             >;
         };
 
