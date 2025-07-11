@@ -186,22 +186,22 @@
         symbol {
             display-name = "Base";
             bindings = <
-&none       &kp F1           &kp F2         &kp F3     &kp F4          &kp F5      &kp C_BRIGHTNESS_DEC                                                             &kp C_BRIGHTNESS_INC  &kp F6       &kp F7          &kp F8                &kp F9                 &kp F10          &mo 3
-&kp DELETE  &kp EXCLAMATION  &kp AT_SIGN    &kp POUND  &kp DOLLAR      &kp F11     &kp C_VOLUME_DOWN                                                                &kp C_VOLUME_UP       &kp F12      &kp PERCENT     &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp COLON        &kp BACKSPACE
-&kp TILDE   &kp CARET        &kp AMPERSAND  &kp EQUAL  &kp UNDERSCORE  &question   &kp C_PREVIOUS        &wspc_left   &tile_left        &tile_right  &wspc_right    &kp C_NEXT            &enhe        &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp DOUBLE_QUOTES
-&kp TAB     &kp BACKSLASH    &kp PIPE       &kp PLUS   &kp MINUS       &term_left                                     &kp LEFT_ALT      &caps_word                                        &term_right  &kp ASTERISK    &kp LESS_THAN         &kp GREATER_THAN       &kp QUESTION     &kp RSHFT
-&none       &none            &none          &none      &none                       &kp LA(BACKSPACE)     &double_esc  &kp LEFT_GUI      &kp TAB      &kp RS(ENTER)  &kp SPACE                          &none           &none                 &none                  &none            &none
+&none       &kp F1           &kp F2         &kp F3     &kp F4          &kp F5      &kp C_BRIGHTNESS_DEC                                                                          &kp C_BRIGHTNESS_INC  &kp F6       &kp F7          &kp F8                &kp F9                 &kp F10          &mo 3
+&kp DELETE  &kp EXCLAMATION  &kp AT_SIGN    &kp POUND  &kp DOLLAR      &kp F11     &kp C_VOLUME_DOWN                                                                             &kp C_VOLUME_UP       &kp F12      &kp PERCENT     &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp COLON        &kp BACKSPACE
+&kp TILDE   &kp CARET        &kp AMPERSAND  &kp EQUAL  &kp UNDERSCORE  &question   &kp C_PREVIOUS        &wspc_left                &tile_left        &tile_right  &wspc_right    &kp C_NEXT            &enhe        &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp DOUBLE_QUOTES
+&kp TAB     &kp BACKSLASH    &kp PIPE       &kp PLUS   &kp MINUS       &term_left                                                  &kp LEFT_ALT      &caps_word                                        &term_right  &kp ASTERISK    &kp LESS_THAN         &kp GREATER_THAN       &kp QUESTION     &kp RSHFT
+&none       &none            &none          &none      &none                       &kp LA(BACKSPACE)     &auto_shift LCTRL ESCAPE  &kp LEFT_GUI      &kp TAB      &kp RS(ENTER)  &kp SPACE                          &none           &none                 &none                  &none            &none
             >;
         };
 
         nav {
             display-name = "Base";
             bindings = <
-&none      &kp F1     &kp F2          &kp F3          &kp F4           &kp F5      &kp C_BRIGHTNESS_DEC                                                                 &kp C_BRIGHTNESS_INC  &kp F6       &kp F7                      &kp F8                  &kp F9        &kp F10        &mo 3
-&kp DEL    &kp HOME   &kp PAGE_UP     &kp UP_ARROW    &kp PAGE_DOWN    &kp F11     &kp C_VOLUME_DOWN                                                                    &kp C_VOLUME_UP       &kp F12      &kp NUMBER_7                &kp NUMBER_8            &kp NUMBER_9  &kp STAR       &kp BACKSPACE
-&kp TILDE  &kp EQUAL  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &question   &kp C_PREVIOUS        &wspc_left   &tile_left            &tile_right  &wspc_right    &kp C_NEXT            &enhe        &hm RIGHT_COMMAND NUMBER_4  &hm RIGHT_ALT NUMBER_5  &kp NUMBER_6  &kp NUMBER_0   &kp DOUBLE_QUOTES
-&kp TAB    &kp END    &kp DOT         &kp PLUS        &kp MINUS        &term_left                                     &kp LEFT_ALT          &caps_word                                        &term_right  &kp NUMBER_1                &kp NUMBER_2            &kp NUMBER_3  &kp BACKSLASH  &kp RSHFT
-&none      &none      &none           &none           &none                        &kp LA(BACKSPACE)     &double_esc  &kp LEFT_COMMAND      &kp TAB      &kp RS(ENTER)  &kp SPACE                          &none                       &none                   &none         &none          &none
+&none      &kp F1     &kp F2          &kp F3          &kp F4           &kp F5      &kp C_BRIGHTNESS_DEC                                                                              &kp C_BRIGHTNESS_INC  &kp F6       &kp F7                      &kp F8                  &kp F9        &kp F10        &mo 3
+&kp DEL    &kp HOME   &kp PAGE_UP     &kp UP_ARROW    &kp PAGE_DOWN    &kp F11     &kp C_VOLUME_DOWN                                                                                 &kp C_VOLUME_UP       &kp F12      &kp NUMBER_7                &kp NUMBER_8            &kp NUMBER_9  &kp STAR       &kp BACKSPACE
+&kp TILDE  &kp EQUAL  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &question   &kp C_PREVIOUS        &wspc_left                &tile_left            &tile_right  &wspc_right    &kp C_NEXT            &enhe        &hm RIGHT_COMMAND NUMBER_4  &hm RIGHT_ALT NUMBER_5  &kp NUMBER_6  &kp NUMBER_0   &kp DOUBLE_QUOTES
+&kp TAB    &kp END    &kp DOT         &kp PLUS        &kp MINUS        &term_left                                                  &kp LEFT_ALT          &caps_word                                        &term_right  &kp NUMBER_1                &kp NUMBER_2            &kp NUMBER_3  &kp BACKSLASH  &kp RSHFT
+&none      &none      &none           &none           &none                        &kp LA(BACKSPACE)     &auto_shift LCTRL ESCAPE  &kp LEFT_COMMAND      &kp TAB      &kp RS(ENTER)  &kp SPACE                          &none                       &none                   &none         &none          &none
             >;
         };
 
