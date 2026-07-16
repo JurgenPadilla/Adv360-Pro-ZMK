@@ -214,11 +214,11 @@
         nav {
             display-name = "Base";
             bindings = <
-&kp ESCAPE  &kp F1            &kp F2          &kp F3          &kp F4           &kp F5      &kp C_BRIGHTNESS_DEC                                                                                              &kp C_BRIGHTNESS_INC  &kp F6         &kp F7                  &kp F8                  &tog 4        &kp F10       &mo 3
-&trans      &kp HOME          &kp PAGE_UP     &kp UP_ARROW    &kp PAGE_DOWN    &kp F11     &kp C_VOLUME_DOWN                                                                                                 &kp C_VOLUME_UP       &kp F12        &kp NUMBER_7            &kp NUMBER_8            &kp NUMBER_9  &kp STAR      &trans
-&trans      &scroll_shortcut  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &question   &kp C_PREVIOUS                         &wspc_left                 &tile_left            &tile_right  &wspc_right  &kp C_NEXT            &enhe          &hm RIGHT_GUI NUMBER_4  &hm RIGHT_ALT NUMBER_5  &kp NUMBER_6  &kp NUMBER_0  &kp EQUAL
-&trans      &kp END           &kp DOT         &kp PLUS        &kp MINUS        &term_left                                                                    &kp LEFT_ALT          &caps_word                                      &kp RIGHT_ALT  &kp NUMBER_1            &kp NUMBER_2            &kp NUMBER_3  &kp SLASH     &kp DOT
-&tog 2      &none             &none           &none           &none                        &hold_tap_qk LC(LEFT_SHIFT) LC(SPACE)  &hold_tap_qk LCTRL ESCAPE  &kp LEFT_COMMAND      &kp TAB      &none        &none                                &none                   &none                   &none         &none         &none
+&kp ESCAPE  &kp F1            &kp F2          &kp F3          &kp F4           &kp F5      &kp C_BRIGHTNESS_DEC                                                                                          &kp C_BRIGHTNESS_INC  &kp F6         &kp F7                  &kp F8                  &tog 4        &kp F10       &mo 3
+&trans      &kp HOME          &kp PAGE_UP     &kp UP_ARROW    &kp PAGE_DOWN    &kp F11     &kp C_VOLUME_DOWN                                                                                             &kp C_VOLUME_UP       &kp F12        &kp NUMBER_7            &kp NUMBER_8            &kp NUMBER_9  &kp STAR      &trans
+&trans      &scroll_shortcut  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &question   &kp C_PREVIOUS                     &wspc_left                 &tile_left            &tile_right  &wspc_right  &kp C_NEXT            &enhe          &hm RIGHT_GUI NUMBER_4  &hm RIGHT_ALT NUMBER_5  &kp NUMBER_6  &kp NUMBER_0  &kp EQUAL
+&trans      &kp END           &kp DOT         &kp PLUS        &kp MINUS        &term_left                                                                &kp LEFT_ALT          &caps_word                                      &kp RIGHT_ALT  &kp NUMBER_1            &kp NUMBER_2            &kp NUMBER_3  &kp SLASH     &kp DOT
+&tog 2      &none             &none           &none           &none                        &hold_tap_qk LEFT_SHIFT LC(SPACE)  &hold_tap_qk LCTRL ESCAPE  &kp LEFT_COMMAND      &kp TAB      &none        &none                                &none                   &none                   &none         &none         &none
             >;
         };
 
