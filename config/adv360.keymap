@@ -203,11 +203,11 @@
         symbol {
             display-name = "Base";
             bindings = <
-&none      &kp F1           &kp F2         &kp F3     &kp F4          &kp F5      &kp C_BRIGHTNESS_DEC                                                                      &kp C_BRIGHTNESS_INC  &kp F6       &kp F7          &kp F8                &kp F9                 &kp F10          &mo 3
-&trans     &kp CARET        &kp AT_SIGN    &kp POUND  &kp DOLLAR      &kp F11     &kp C_VOLUME_DOWN                                                                         &kp C_VOLUME_UP       &kp F12      &kp PERCENT     &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp COLON        &trans
-&kp TILDE  &kp EXCLAMATION  &kp AMPERSAND  &kp EQUAL  &kp MINUS       &question   &kp C_PREVIOUS        &wspc_left              &tile_left        &tile_right  &wspc_right  &kp C_NEXT            &enhe        &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp DOUBLE_QUOTES
-&trans     &kp BACKSLASH    &kp PIPE       &kp PLUS   &kp UNDERSCORE  &term_left                                                &kp LEFT_ALT      &caps_word                                      &term_right  &kp ASTERISK    &kp LESS_THAN         &kp GREATER_THAN       &kp QUESTION     &trans
-&none      &none            &none          &none      &none                       &kp LC(SPACE)         &hold_tap_qk LCTRL ESC  &kp LEFT_GUI      &kp TAB      &none        &none                              &none           &none                 &none                  &none            &none
+&none      &kp F1           &kp F2         &kp F3     &kp F4          &kp F5      &kp C_BRIGHTNESS_DEC                                                             &kp C_BRIGHTNESS_INC  &kp F6       &kp F7          &kp F8                &kp F9                 &kp F10          &mo 3
+&trans     &kp CARET        &kp AT_SIGN    &kp POUND  &kp DOLLAR      &kp F11     &kp C_VOLUME_DOWN                                                                &kp C_VOLUME_UP       &kp F12      &kp PERCENT     &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp COLON        &trans
+&kp TILDE  &kp EXCLAMATION  &kp AMPERSAND  &kp EQUAL  &kp MINUS       &question   &kp C_PREVIOUS        &wspc_left     &tile_left        &tile_right  &wspc_right  &kp C_NEXT            &enhe        &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp DOUBLE_QUOTES
+&trans     &kp BACKSLASH    &kp PIPE       &kp PLUS   &kp UNDERSCORE  &term_left                                       &kp LEFT_ALT      &caps_word                                      &term_right  &kp ASTERISK    &kp LESS_THAN         &kp GREATER_THAN       &kp QUESTION     &trans
+&none      &none            &none          &none      &none                       &kp SPACE             &kp LC(SPACE)  &kp LEFT_GUI      &kp TAB      &none        &none                              &none           &none                 &none                  &none            &none
             >;
         };
 
@@ -236,11 +236,11 @@
         mouse {
             display-name = "mouse";
             bindings = <
-&kp ESCAPE  &kp F1            &kp F2          &kp F3          &kp F4           &kp F5      &kp C_BRIGHTNESS_DEC                                                                                                &kp C_BRIGHTNESS_INC  &kp F6       &kp F7                      &kp F8                  &tog 4        &kp F10       &mo 3
-&trans      &kp HOME          &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &kp F11     &kp C_VOLUME_DOWN                                                                                                   &kp C_VOLUME_UP       &kp F12      &kp NUMBER_7                &kp NUMBER_8            &kp NUMBER_9  &kp STAR      &trans
-&trans      &scroll_shortcut  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &question   &kp C_PREVIOUS        &wspc_left                 &tile_left            &tile_right  &wspc_right                     &kp C_NEXT            &enhe        &hm RIGHT_COMMAND NUMBER_4  &hm RIGHT_ALT NUMBER_5  &kp NUMBER_6  &kp NUMBER_0  &kp EQUAL
-&trans      &kp END           &kp DOT         &mkp MCLK       &kp MINUS        &term_left                                                   &kp LEFT_ALT          &caps_word                                                         &term_right  &kp NUMBER_1                &kp NUMBER_2            &kp NUMBER_3  &kp SLASH     &kp DOT
-&none       &none             &none           &none           &none                        &kp SPACE             &hold_tap_qk LCTRL ESCAPE  &kp LEFT_COMMAND      &kp TAB      &hold_tap_qk RIGHT_SHIFT ENTER  &kp BACKSPACE                      &none                       &none                   &none         &none         &none
+&kp ESCAPE  &kp F1            &kp F2          &kp F3          &kp F4           &kp F5      &kp C_BRIGHTNESS_DEC                                                                                                         &kp C_BRIGHTNESS_INC  &kp F6       &kp F7                      &kp F8                  &tog 4        &kp F10       &mo 3
+&trans      &kp HOME          &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &kp F11     &kp C_VOLUME_DOWN                                                                                                            &kp C_VOLUME_UP       &kp F12      &kp NUMBER_7                &kp NUMBER_8            &kp NUMBER_9  &kp STAR      &trans
+&trans      &scroll_shortcut  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &question   &kp C_PREVIOUS                 &wspc_left                 &tile_left            &tile_right  &wspc_right                     &kp C_NEXT            &enhe        &hm RIGHT_COMMAND NUMBER_4  &hm RIGHT_ALT NUMBER_5  &kp NUMBER_6  &kp NUMBER_0  &kp EQUAL
+&trans      &kp END           &kp DOT         &mkp MCLK       &kp MINUS        &term_left                                                            &kp LEFT_ALT          &caps_word                                                         &term_right  &kp NUMBER_1                &kp NUMBER_2            &kp NUMBER_3  &kp SLASH     &kp DOT
+&none       &none             &none           &none           &none                        &hold_tap_qk LEFT_SHIFT SPACE  &hold_tap_qk LCTRL ESCAPE  &kp LEFT_COMMAND      &kp TAB      &hold_tap_qk RIGHT_SHIFT ENTER  &kp BACKSPACE                      &none                       &none                   &none         &none         &none
             >;
         };
 
